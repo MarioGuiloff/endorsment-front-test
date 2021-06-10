@@ -1,0 +1,22 @@
+/* Styles to hide/show the placeholder on input focus */
+/* Chrome/Opera/Safari */
+.input-field::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+/* Firefox 19+ */
+.input-field::-moz-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+.input-field:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.input-field:not(:placeholder-shown) + label,
+.input-field:focus + label {
+  font-weight: 200;
+  cursor: pointer;
+}
